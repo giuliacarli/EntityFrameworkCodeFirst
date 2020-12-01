@@ -33,7 +33,7 @@ namespace Ticketing.Client.Model.Configuration
                 .IsRequired()
                 .HasMaxLength(50);
 
-            builder
+            builder                 // qui viene gestita la relazione uno a molti partendo da Ticket (ma si può fare anche viceversa, però di solito si parte da quello che è 1 nella relazione 1:n)
                 .HasMany(t => t.Notes)
                 .WithOne(n => n.Ticket)
                 .HasForeignKey(n => n.TicketId)
