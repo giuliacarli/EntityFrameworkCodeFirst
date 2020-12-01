@@ -14,7 +14,7 @@ namespace Ticketing.Client
             do
             {
                 Console.WriteLine("Comando: ");
-                string command = Console.ReadLine();
+                string command = Console.ReadLine();//
                 Console.WriteLine();
 
                 switch (command)
@@ -23,7 +23,7 @@ namespace Ticketing.Client
                         quit = true;
                         break;
                     case "a":
-                        //ADD
+                        //ADD 
                         Ticket ticket = new Ticket();
                         ticket.Title = GetData("Titolo");
                         ticket.Description = GetData("Descrizione");

@@ -10,7 +10,7 @@ namespace Ticketing.Client
     {
         public List<Ticket> List()
         {
-            using var ctx = new TicketContext(); // come scrivere using (var ctx = new TicketContext) {}
+            using var ctx = new TicketContext(); //come scrivere using (var ctx = new TicketContext) {}
 
             return ctx.Tickets.ToList();
         }
