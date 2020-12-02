@@ -15,12 +15,15 @@ namespace Ticketing.Client.Context
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Note> Notes { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
+        protected override void OnConfiguring(
+            DbContextOptionsBuilder optionBuilder
+        )
         {
             string connString = Config.GetConnectionString("TicketDb");
-            //OPPURE
-            //string connString = Config.GetSection("ConnectionString")["TicketDb"];
+            // OPPURE
+            //string connString = Config.GetSection("ConnectionStrings")["TicketDb"];
 
+            optionBuilder.UseLazyLoadingProxies();
             optionBuilder.UseSqlServer(connString);
         }
 

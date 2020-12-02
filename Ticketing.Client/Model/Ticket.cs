@@ -6,10 +6,10 @@ namespace Ticketing.Client.Model
 {
     public class Ticket
     {
-        public Ticket()
-        {
-            Notes = new List<Note>();
-        }
+        //public Ticket()
+        //{
+        //    Notes = new List<Note>();   non serve più
+        //}
 
         public int Id { get; set; }
         public DateTime IssueDate { get; set; }
@@ -19,6 +19,8 @@ namespace Ticketing.Client.Model
         public string Category { get; set; }
         public string Priority { get; set; }
         public string State { get; set; }
+
+        public Byte[] RowVersion { get; set; }
         public virtual List<Note> Notes { get; set; }
     }
 }
