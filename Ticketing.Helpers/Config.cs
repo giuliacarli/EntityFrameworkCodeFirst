@@ -21,7 +21,7 @@ namespace Ticketing.Helpers
             return config.GetSection(sectionName);
         }
 
-        string connString = config.GetConnectionString("TicketDb");
+        //string connString = config.GetConnectionString("TicketDb");
         //OPPURE
         //string connString = config.GetSection("ConnectionString")["TicketDb"]
     }

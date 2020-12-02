@@ -14,7 +14,7 @@ namespace Ticketing.Client
             do
             {
                 Console.WriteLine("Comando: ");
-                string command = Console.ReadLine();//
+                string command = Console.ReadLine();
                 Console.WriteLine();
 
                 switch (command)
